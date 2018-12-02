@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Qiwogames -Creer Articles-{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row table-container">
+            <br />
+            <div class="col-sm-3 left-container">
+                {% include 'includes/leftmenu.html.twig' %}
+            </div>
+            <br />
+            <div class="col-sm-9 right-container">
+                <h1 class="h1-titre list-group-item list-group-item-primary active"><i class="fas fa-gamepad"></i> AJOUTER UN ARTICLE :</h1>
+                <div class="animated slideInRight">
+                    {{ include('articles/_form.html.twig') }}
+                    <div class="right-content">
+                        <a class="btn btn-outline-primary" href="{{ path('articles_index') }}">Annuler</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

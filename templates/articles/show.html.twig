@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Qiwogames -Détails Articles-{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row table-container">
+            <br />
+            <div class="col-sm-3 left-container">
+                {% include 'includes/leftmenu.html.twig' %}
+            </div>
+            <br />
+            <div class="col-sm-9 right-container">
+                <h1 class="h1-titre list-group-item list-group-item-primary active"><i class="fas fa-gamepad"></i> ARTICLES :</h1>
+
+                <table class="table table-striped animated slideInRight">
+                    <tbody>
+                    <tr>
+                        <th>Id</th>
+                        <td>{{ article.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Titre</th>
+                        <td>{{ article.title }}</td>
+                    </tr>
+                    <tr>
+                        <th>Contenus</th>
+                        <td>{{ article.content }}</td>
+                    </tr>
+                    <tr>
+                        <th>Image</th>
+                        <td>{{ article.image }}</td>
+                    </tr>
+                    <tr>
+                        <th>Date</th>
+                        <td>{{ article.createdAt ? article.createdAt|date('d/m/Y H:i:s') : '' }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <a class="btn btn-outline-primary" href="{{ path('articles_index') }}">Annuler</a>
+
+                <a class="btn btn-outline-warning" href="{{ path('articles_edit', {'id': article.id}) }}">Editer</a>
+
+                {{ include('articles/_delete_form.html.twig') }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

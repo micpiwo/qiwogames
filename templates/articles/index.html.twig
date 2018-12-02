@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Qiwogame -Articles-{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row table-container">
+            <br />
+            <div class="col-sm-3 left-container">
+                {% include 'includes/leftmenu.html.twig' %}
+            </div>
+            <br />
+            <div class="col-sm-9 right-container">
+                <h1 class="h1-titre list-group-item list-group-item-primary active"><i class="fas fa-gamepad"></i> JEUX :</h1>
+
+                <table class="table table-striped animated slideInRight">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Titre</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                        <th>Action</th>
+                        <th>Date</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for article in articles %}
+                        <tr>
+                            <td>{{ article.title }}</td>
+                            <td>{{ article.content }}</td>
+                            <td><img class="img-fluid" src="{{ article.image }}" alt="" title="Extrait du Jeux" /> </td>
+                            <td><a href="{{ article.link }}" class="btn btn-outline-primary" target="_blank">JOUER</a> </td>
+                            <td>{{ article.createdAt ? article.createdAt|date('d/m/Y H:i:s') : '' }}</td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="6">Aucun Résultat !</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

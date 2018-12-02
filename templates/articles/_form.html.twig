@@ -1,0 +1,13 @@
+
+<div class="right-content">
+    {{ form_errors(form) }}
+    {{ form_start(form) }}
+    {{ form_row(form.title,{'label': 'Titre'}) }}
+    {{ form_row(form.content,{'label': 'Contenu'}) }}
+    {{ form_row(form.image,{'label': 'Image'}) }}
+    {{ form_row(form.link,{'label': 'Liens'}) }}
+    {{ form_row(form.createdAt,{'label': 'Date'}) }}
+    <button class="btn btn-outline-success">{{ button_label|default('Sauvegarder') }}</button>
+    {{ form_end(form) }}
+</div>
+

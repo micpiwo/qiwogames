@@ -1,0 +1,13 @@
+Alwaysdata.net
+
+email: michel.michael38@gmail.com
+mdp: slad
+
+ftp: ftp-qiwogames.alwaysdata.net
+username: qiwogames
+mdp: slad
+
+SSH
+Hôte SSH : https://ssh-qiwogames.alwaysdata.net/
+username: qiwogames
+mdp: slad

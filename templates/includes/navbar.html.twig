@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navigation-bar">
+    <a class="navbar-brand" href="{{ path('articles_index') }}">
+        <img src="{{ asset('img/logo.png') }}" class="img-fluid" alt="" title="" id="logo-qiwo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav nav-list">
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ path('articles_index') }}" alt="Accueil" title="Accueil">
+                    <i class="fas fa-home fa-3x"></i>
+                    <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+                <a class="nav-link nav-text" href="{{ path('user_index') }}" title="Connexion">
+                    <i class="fas fa-eye-slash fa-3x"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
